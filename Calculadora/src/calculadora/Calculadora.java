@@ -65,6 +65,7 @@ public class Calculadora extends javax.swing.JFrame {
         etiquetaMuestra = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(400, 400));
 
         panel.setLayout(new java.awt.GridLayout(5, 5));
 
@@ -318,19 +319,16 @@ public class Calculadora extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(etiquetaMuestra, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(178, 178, 178))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(etiquetaNumeros, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addContainerGap())))
+                    .addComponent(etiquetaNumeros, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(etiquetaMuestra, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(etiquetaMuestra, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(62, 62, 62)
+                .addComponent(etiquetaMuestra, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(etiquetaNumeros, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(panel, javax.swing.GroupLayout.PREFERRED_SIZE, 323, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -500,6 +498,14 @@ public class Calculadora extends javax.swing.JFrame {
             }
         }
         
+        else if (operacion.equals("elevarN")){
+            segundoNumero = Double.parseDouble(cadenaNumeros);
+            resultado = Math.pow(primerNumero, segundoNumero);
+            etiquetaNumeros.setText(String.format("% .2f",resultado));
+            cadenaNumeros = String.valueOf(resultado);
+            operacion = "nula";
+        }
+        
         etiquetaMuestra.setText("");
         activado = true;
         punto = false;
@@ -602,7 +608,13 @@ public class Calculadora extends javax.swing.JFrame {
     
     // X elevado a la Y
     private void botonC2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonC2ActionPerformed
-        // TODO add your handling code here:
+        if(activado == true){
+            primerNumero = Double.parseDouble(cadenaNumeros);
+            etiquetaMuestra.setText(cadenaNumeros + " ^ ");
+            cadenaNumeros = "";
+            operacion = "elevarN";
+            activado = false;
+        }
     }//GEN-LAST:event_botonC2ActionPerformed
     
     // Porcentaje
