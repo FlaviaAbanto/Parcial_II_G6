@@ -539,11 +539,17 @@ public class Calculadora extends javax.swing.JFrame {
     }//GEN-LAST:event_botonDivisionActionPerformed
 
     private void botonRaizActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonRaizActionPerformed
-        primerNumero = Double.parseDouble(cadenaNumeros);
-        etiquetaMuestra.setText("sqrt("+cadenaNumeros+")");
-        resultado = Math.sqrt(primerNumero);
-        etiquetaNumeros.setText(String.format("%.2f", resultado));
-        cadenaNumeros = String.valueOf(resultado); //convertimos el valor a cadena
+        try {
+            primerNumero = Double.parseDouble(cadenaNumeros);
+            resultado = Math.sqrt(primerNumero);
+            etiquetaNumeros.setText(String.format("%.2f", resultado));
+            etiquetaMuestra.setText("sqrt(" + cadenaNumeros + ")");
+            cadenaNumeros = String.valueOf(resultado);
+        } catch (NumberFormatException e) {
+            // Manejar la excepción de análisis de doble
+            etiquetaMuestra.setText("Error");
+            cadenaNumeros = "";
+        }  
     }//GEN-LAST:event_botonRaizActionPerformed
 
     private void botonPuntoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonPuntoActionPerformed
