@@ -603,7 +603,15 @@ public class Calculadora extends javax.swing.JFrame {
     
     // 1 entre X
     private void botonC1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonC1ActionPerformed
-        // TODO add your handling code here:
+        if(!cadenaNumeros.equals("")){
+            double primerNumero = Double.parseDouble(cadenaNumeros);
+            double resultado = 1 / primerNumero;
+            cadenaNumeros = String.valueOf(resultado);
+            etiquetaNumeros.setText(cadenaNumeros);
+            etiquetaMuestra.setText("");
+            activado = true;
+            punto = true;
+        }
     }//GEN-LAST:event_botonC1ActionPerformed
     
     // X elevado a la Y
