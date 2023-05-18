@@ -611,7 +611,15 @@ public class Calculadora extends javax.swing.JFrame {
 
     // X al cuadrado
     private void jButton45ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton45ActionPerformed
-        // TODO add your handling code here:
+           if(!cadenaNumeros.equals("")){
+            double primerNumero = Double.parseDouble(cadenaNumeros);
+            double resultado = Math.pow(primerNumero, 2);
+            cadenaNumeros = String.valueOf(resultado);
+            etiquetaNumeros.setText(cadenaNumeros);
+            etiquetaMuestra.setText("");
+            activado = true;
+            punto = true;
+         }   
     }//GEN-LAST:event_jButton45ActionPerformed
 
     /**
