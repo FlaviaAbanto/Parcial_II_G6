@@ -624,6 +624,13 @@ public class Calculadora extends javax.swing.JFrame {
     
     // X elevado al 3
     private void jButton44ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton44ActionPerformed
+  
+    String texto = etiquetaNumeros.getText();
+    double numero = Double.parseDouble(texto);
+    double cubo = Math.pow(numero, 3);
+    etiquetaNumeros.setText(String.valueOf(cubo));
+    activado = true; //voy a usar la calculadora
+
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton44ActionPerformed
 
