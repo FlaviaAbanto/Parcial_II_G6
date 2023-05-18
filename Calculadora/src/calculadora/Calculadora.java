@@ -39,7 +39,7 @@ public class Calculadora extends javax.swing.JFrame {
         botonRaiz = new javax.swing.JButton();
         botonC = new javax.swing.JButton();
         botonCE = new javax.swing.JButton();
-        jButton43 = new javax.swing.JButton();
+        botonPorcentaje = new javax.swing.JButton();
         botonDivision = new javax.swing.JButton();
         jButton45 = new javax.swing.JButton();
         jButton35 = new javax.swing.JButton();
@@ -96,15 +96,15 @@ public class Calculadora extends javax.swing.JFrame {
         });
         panel.add(botonCE);
 
-        jButton43.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jButton43.setText("%");
-        jButton43.setToolTipText("");
-        jButton43.addActionListener(new java.awt.event.ActionListener() {
+        botonPorcentaje.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        botonPorcentaje.setText("%");
+        botonPorcentaje.setToolTipText("");
+        botonPorcentaje.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton43ActionPerformed(evt);
+                botonPorcentajeActionPerformed(evt);
             }
         });
-        panel.add(jButton43);
+        panel.add(botonPorcentaje);
 
         botonDivision.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         botonDivision.setText("/");
@@ -618,9 +618,12 @@ public class Calculadora extends javax.swing.JFrame {
     }//GEN-LAST:event_botonC2ActionPerformed
     
     // Porcentaje
-    private void jButton43ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton43ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton43ActionPerformed
+    private void botonPorcentajeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonPorcentajeActionPerformed
+        double porcentaje = Double.parseDouble(cadenaNumeros);
+        double resultadoPorcentaje = primerNumero * (porcentaje / 100.0);
+        etiquetaNumeros.setText(String.valueOf(resultadoPorcentaje));
+        cadenaNumeros = String.valueOf(resultadoPorcentaje);
+    }//GEN-LAST:event_botonPorcentajeActionPerformed
     
     // X elevado al 3
     private void jButton44ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton44ActionPerformed
@@ -693,6 +696,7 @@ public class Calculadora extends javax.swing.JFrame {
     private javax.swing.JButton botonDivision;
     private javax.swing.JButton botonIgual;
     private javax.swing.JButton botonMultiplicar;
+    private javax.swing.JButton botonPorcentaje;
     private javax.swing.JButton botonPunto;
     private javax.swing.JButton botonRaiz;
     private javax.swing.JButton botonRestar;
@@ -710,7 +714,6 @@ public class Calculadora extends javax.swing.JFrame {
     private javax.swing.JButton jButton40;
     private javax.swing.JButton jButton41;
     private javax.swing.JButton jButton42;
-    private javax.swing.JButton jButton43;
     private javax.swing.JButton jButton44;
     private javax.swing.JButton jButton45;
     private javax.swing.JPanel panel;
