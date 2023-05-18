@@ -36,22 +36,27 @@ public class Calculadora extends javax.swing.JFrame {
     private void initComponents() {
 
         panel = new javax.swing.JPanel();
-        botonC = new javax.swing.JButton();
         botonRaiz = new javax.swing.JButton();
-        botonDivision = new javax.swing.JButton();
+        botonC = new javax.swing.JButton();
         botonCE = new javax.swing.JButton();
+        jButton43 = new javax.swing.JButton();
+        botonDivision = new javax.swing.JButton();
+        jButton45 = new javax.swing.JButton();
         jButton35 = new javax.swing.JButton();
         jButton28 = new javax.swing.JButton();
         jButton29 = new javax.swing.JButton();
         botonMultiplicar = new javax.swing.JButton();
+        botonC1 = new javax.swing.JButton();
         jButton32 = new javax.swing.JButton();
         jButton33 = new javax.swing.JButton();
         jButton34 = new javax.swing.JButton();
         botonRestar = new javax.swing.JButton();
+        botonC2 = new javax.swing.JButton();
         jButton37 = new javax.swing.JButton();
         jButton40 = new javax.swing.JButton();
         jButton38 = new javax.swing.JButton();
         botonSumar = new javax.swing.JButton();
+        jButton44 = new javax.swing.JButton();
         jButton41 = new javax.swing.JButton();
         jButton42 = new javax.swing.JButton();
         botonPunto = new javax.swing.JButton();
@@ -61,16 +66,7 @@ public class Calculadora extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        panel.setLayout(new java.awt.GridLayout(5, 4));
-
-        botonC.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        botonC.setText("C");
-        botonC.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonCActionPerformed(evt);
-            }
-        });
-        panel.add(botonC);
+        panel.setLayout(new java.awt.GridLayout(5, 5));
 
         botonRaiz.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         botonRaiz.setText("√");
@@ -81,14 +77,14 @@ public class Calculadora extends javax.swing.JFrame {
         });
         panel.add(botonRaiz);
 
-        botonDivision.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        botonDivision.setText("/");
-        botonDivision.addActionListener(new java.awt.event.ActionListener() {
+        botonC.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        botonC.setText("C");
+        botonC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonDivisionActionPerformed(evt);
+                botonCActionPerformed(evt);
             }
         });
-        panel.add(botonDivision);
+        panel.add(botonC);
 
         botonCE.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         botonCE.setText("CE");
@@ -98,6 +94,34 @@ public class Calculadora extends javax.swing.JFrame {
             }
         });
         panel.add(botonCE);
+
+        jButton43.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jButton43.setText("%");
+        jButton43.setToolTipText("");
+        jButton43.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton43ActionPerformed(evt);
+            }
+        });
+        panel.add(jButton43);
+
+        botonDivision.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        botonDivision.setText("/");
+        botonDivision.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonDivisionActionPerformed(evt);
+            }
+        });
+        panel.add(botonDivision);
+
+        jButton45.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jButton45.setText("x^2");
+        jButton45.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton45ActionPerformed(evt);
+            }
+        });
+        panel.add(jButton45);
 
         jButton35.setBackground(new java.awt.Color(204, 204, 204));
         jButton35.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -138,6 +162,15 @@ public class Calculadora extends javax.swing.JFrame {
         });
         panel.add(botonMultiplicar);
 
+        botonC1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        botonC1.setText("1/x");
+        botonC1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonC1ActionPerformed(evt);
+            }
+        });
+        panel.add(botonC1);
+
         jButton32.setBackground(new java.awt.Color(204, 204, 204));
         jButton32.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jButton32.setText("4");
@@ -177,6 +210,15 @@ public class Calculadora extends javax.swing.JFrame {
         });
         panel.add(botonRestar);
 
+        botonC2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        botonC2.setText("x^y");
+        botonC2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonC2ActionPerformed(evt);
+            }
+        });
+        panel.add(botonC2);
+
         jButton37.setBackground(new java.awt.Color(204, 204, 204));
         jButton37.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jButton37.setText("1");
@@ -215,6 +257,15 @@ public class Calculadora extends javax.swing.JFrame {
             }
         });
         panel.add(botonSumar);
+
+        jButton44.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jButton44.setText("x^3");
+        jButton44.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton44ActionPerformed(evt);
+            }
+        });
+        panel.add(jButton44);
 
         jButton41.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jButton41.setText("+/-");
@@ -263,28 +314,32 @@ public class Calculadora extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panel, javax.swing.GroupLayout.DEFAULT_SIZE, 316, Short.MAX_VALUE)
+            .addComponent(panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(etiquetaMuestra, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(etiquetaNumeros, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(etiquetaMuestra, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(178, 178, 178))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(etiquetaNumeros, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap())))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(etiquetaMuestra, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(etiquetaNumeros, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(etiquetaMuestra, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(62, 62, 62)
+                .addComponent(etiquetaNumeros, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(panel, javax.swing.GroupLayout.PREFERRED_SIZE, 323, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    // Número 7
     private void jButton35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton35ActionPerformed
         if(etiquetaNumeros.getText().equals("0")){
             cadenaNumeros = "7";
@@ -295,6 +350,7 @@ public class Calculadora extends javax.swing.JFrame {
         activado = true; //voy a usar la calculadora
     }//GEN-LAST:event_jButton35ActionPerformed
 
+    // Número 8
     private void jButton28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton28ActionPerformed
         if(etiquetaNumeros.getText().equals("0")){
             cadenaNumeros = "8";
@@ -304,7 +360,8 @@ public class Calculadora extends javax.swing.JFrame {
         etiquetaNumeros.setText(cadenaNumeros);
         activado = true; //voy a usar la calculadora
     }//GEN-LAST:event_jButton28ActionPerformed
-
+    
+    // Número 9
     private void jButton29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton29ActionPerformed
         if(etiquetaNumeros.getText().equals("0")){
             cadenaNumeros = "9";
@@ -315,6 +372,7 @@ public class Calculadora extends javax.swing.JFrame {
         activado = true; //voy a usar la calculadora
     }//GEN-LAST:event_jButton29ActionPerformed
 
+    // Número 4
     private void jButton32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton32ActionPerformed
         if(etiquetaNumeros.getText().equals("0")){
             cadenaNumeros = "4";
@@ -325,6 +383,7 @@ public class Calculadora extends javax.swing.JFrame {
         activado = true; //voy a usar la calculadora
     }//GEN-LAST:event_jButton32ActionPerformed
 
+    // Número 5
     private void jButton33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton33ActionPerformed
         if(etiquetaNumeros.getText().equals("0")){
             cadenaNumeros = "5";
@@ -335,6 +394,7 @@ public class Calculadora extends javax.swing.JFrame {
         activado = true; //voy a usar la calculadora
     }//GEN-LAST:event_jButton33ActionPerformed
 
+    // Número 6
     private void jButton34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton34ActionPerformed
         if(etiquetaNumeros.getText().equals("0")){
             cadenaNumeros = "6";
@@ -345,6 +405,7 @@ public class Calculadora extends javax.swing.JFrame {
         activado = true; //voy a usar la calculadora
     }//GEN-LAST:event_jButton34ActionPerformed
 
+    // Número 1
     private void jButton37ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton37ActionPerformed
         if(etiquetaNumeros.getText().equals("0")){
             cadenaNumeros = "1";
@@ -355,6 +416,7 @@ public class Calculadora extends javax.swing.JFrame {
         activado = true; //voy a usar la calculadora
     }//GEN-LAST:event_jButton37ActionPerformed
 
+    // Número 2
     private void jButton40ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton40ActionPerformed
         if(etiquetaNumeros.getText().equals("0")){
             cadenaNumeros = "2";
@@ -365,6 +427,7 @@ public class Calculadora extends javax.swing.JFrame {
         activado = true; //voy a usar la calculadora
     }//GEN-LAST:event_jButton40ActionPerformed
 
+    // Número 3
     private void jButton38ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton38ActionPerformed
         if(etiquetaNumeros.getText().equals("0")){
             cadenaNumeros = "3";
@@ -375,6 +438,7 @@ public class Calculadora extends javax.swing.JFrame {
         activado = true; //voy a usar la calculadora
     }//GEN-LAST:event_jButton38ActionPerformed
 
+    // Número 0
     private void jButton42ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton42ActionPerformed
         if(etiquetaNumeros.getText().equals("0")){
             cadenaNumeros = "0";
@@ -494,6 +558,7 @@ public class Calculadora extends javax.swing.JFrame {
         }              
     }//GEN-LAST:event_botonPuntoActionPerformed
 
+    // +/-
     private void jButton41ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton41ActionPerformed
         if(cadenaNumeros.charAt(0) != '-'){ 
             cadenaNumeros = "-" + cadenaNumeros;
@@ -523,6 +588,31 @@ public class Calculadora extends javax.swing.JFrame {
             etiquetaNumeros.setText(cadenaNumeros);
         }
     }//GEN-LAST:event_botonCEActionPerformed
+    
+    // 1 entre X
+    private void botonC1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonC1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonC1ActionPerformed
+    
+    // X elevado a la Y
+    private void botonC2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonC2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonC2ActionPerformed
+    
+    // Porcentaje
+    private void jButton43ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton43ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton43ActionPerformed
+    
+    // X elevado al 3
+    private void jButton44ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton44ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton44ActionPerformed
+
+    // X al cuadrado
+    private void jButton45ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton45ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton45ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -564,6 +654,8 @@ public class Calculadora extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botonC;
+    private javax.swing.JButton botonC1;
+    private javax.swing.JButton botonC2;
     private javax.swing.JButton botonCE;
     private javax.swing.JButton botonDivision;
     private javax.swing.JButton botonIgual;
@@ -585,6 +677,9 @@ public class Calculadora extends javax.swing.JFrame {
     private javax.swing.JButton jButton40;
     private javax.swing.JButton jButton41;
     private javax.swing.JButton jButton42;
+    private javax.swing.JButton jButton43;
+    private javax.swing.JButton jButton44;
+    private javax.swing.JButton jButton45;
     private javax.swing.JPanel panel;
     // End of variables declaration//GEN-END:variables
 }
